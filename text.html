@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Title2</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<button id="clearExpires">清除过期</button><button id="btn">获取</button><button id="del">删除</button><button id="clear">清除</button>
+<button id="setTimeout">重置时间</button><button id="add">add</button>
+<button id="has">a1是否存在</button><button id="replace">a1 replace</button>
+<script src="store-gem.js"></script>
+<script>
+    var store = new storageGem();
+    store.set('a0','name1',2).set('a1','name2');
+    store.set({'a2':2,'a3':3},120);
+    store.set({'b4':'string',b5:['array1',2]},5);
+    store.set('a6');
+    console.log(store.get());    //Object {a0: 'name1', a1: 'name2', a2: 2, a3: 3, a4: 'string', a5: ['array1',2]}
+    console.log(store.get('a0'));    //name1
+    console.log(store.get('a0','a3'));    //Object {a0: 'name1', a3: 3}
+    console.log(store.has('a0'))
+    console.log(store.keys())
+    console.log(store.search('a'))
+    document.getElementById('del').onclick=function() {
+        store.remove('a0','a3');
+        console.log(store.has('a0'))
+    };
+    document.getElementById('clear').onclick=function() {
+        store.clear('a0','a3');
+    };
+    document.getElementById('clearExpires').onclick=function() {
+        store.clearExpires();
+    };
+    document.getElementById('setTimeout').onclick=function() {
+        store.setTimeout('a1',new Date("2014 5 9"));
+    };
+    document.getElementById('add').onclick=function() {
+        store.add('a1','newA1',5000);
+    };
+    document.getElementById('replace').onclick=function() {
+        store.replace('a1','newA1',5000);
+    };
+    document.getElementById('has').onclick=function() {
+        alert(store.has('a1'));
+    };
+</script>
+</body>
+</html>
