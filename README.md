@@ -4,16 +4,11 @@
 
 ## 安装
 
-### bower
-
-```
-$ bower install store-gem.js
-```
 
 ### npm
 
 ```
-$ npm install store-gem.js
+$ npm install store-gem.js --save
 ```
 
 
