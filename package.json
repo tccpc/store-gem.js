@@ -1,6 +1,6 @@
 {
   "name": "store-gem.js",
-  "version": "2.0.6",
+  "version": "2.0.7",
   "description": "最全webStorage封装库-支持cookie解决方案",
   "main": "store-gem.js",
   "scripts": {
