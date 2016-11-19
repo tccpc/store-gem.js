@@ -11,6 +11,12 @@
 $ npm install store-gem.js --save
 ```
 
+## 导入
+
+```javascript
+import store from 'store-gem.js';		// ES6 导入
+var store = require('store-gem.js');	// CommonJS规范导入
+```
 
 ## 本地存储APIs
 
