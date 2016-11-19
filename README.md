@@ -30,7 +30,7 @@ myStore.set(key, data,timeouts);	//单个存储字符串数据 timeouts 为过�
 myStore.set({key: data, key2: data2},timeouts);	//批量存储多个字符串数据
 ```
 ```javascript
-myStore.get(key);               	//获取key的字符串数据
+myStore.get(key);               	//获取key的字符串数据 没有获取到返回null
 ```
 ```javascript
 myStore.get();                  	//获取所有key/data
